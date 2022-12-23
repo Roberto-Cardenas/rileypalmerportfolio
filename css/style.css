@@ -60,7 +60,7 @@ body {
   padding-inline: 1.25rem;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 35em) {
   .wrapper {
     padding-inline: 4rem;
   }
@@ -239,6 +239,7 @@ header {
 .hero .hero__container .text-content p {
   font-size: 0.875rem;
   font-weight: var(--fw-regular);
+  max-width: 45ch;
 }
 .hero .hero__container .btn-content {
   justify-content: start;

@@ -65,7 +65,7 @@ body {
   padding-inline: 1.25rem;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 35em) {
   .wrapper {
     padding-inline: 4rem;
   }
@@ -281,6 +281,7 @@ header {
       p {
         font-size: 0.875rem;
         font-weight: var(--fw-regular);
+        max-width: 45ch;
       }
     }
 
