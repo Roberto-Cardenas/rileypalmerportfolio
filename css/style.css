@@ -241,7 +241,7 @@ header {
   font-weight: var(--fw-regular);
 }
 .hero .hero__container .btn-content {
-  justify-content: center;
+  justify-content: start;
   background: var(--clr-accent-300);
   padding-block: 1rem;
 }
@@ -287,7 +287,6 @@ header {
     font-size: 1.125rem;
   }
   .hero .hero__container .btn-content {
-    justify-content: start;
     background: transparent;
   }
 }/*# sourceMappingURL=style.css.map */

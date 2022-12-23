@@ -285,7 +285,7 @@ header {
     }
 
     .btn-content {
-      justify-content: center;
+      justify-content: start;
       background: var(--clr-accent-300);
       padding-block: 1rem;
     }
@@ -339,7 +339,6 @@ header {
       }
 
       .btn-content {
-        justify-content: start;
         background: transparent;
       }
     }
