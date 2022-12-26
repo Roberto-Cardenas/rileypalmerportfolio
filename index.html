@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
   <title>Riley Palmer Writing Portfolio</title>
   <script src="js/nav.js" defer></script>
   <script src="js/observers.js" defer></script>
@@ -19,15 +19,15 @@
     <a href="" class="logo">Riley Palmer</a>
     <nav>
       <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-        <li class="active home"><a href="#home">Home</a></li>
-        <li class="about"><a href="#about">About</a></li>
-        <li class="portfolio"><a href="#portfolio">Portfolio</a></li>
+        <li class="active home-tab"><a href="#home">Home</a></li>
+        <li class="about-tab"><a href="#about">About</a></li>
+        <li class="portfolio-tab"><a href="#portfolio">Portfolio</a></li>
       </ul>
     </nav>
     <button class="menu-btn" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
   </header>
   <!-- Hero -->
-  <section id="home" class="hero" data-section="home">
+  <section id="home" class="hero" data-section="home-tab">
     <img class="hero__image" src="images/hero-img.jpg" alt="">
     <div class="hero__container">
       <div class="text-content wrapper flow-content">
@@ -43,11 +43,26 @@
   </section>
 
   <!-- About -->
-  <section id="about" class="about" data-section="about">
+  <section id="about" class="about flex wrapper" data-section="about-tab">
+    <div class="about__container">
+      <img src="images/hero-img.jpg" alt="Riley Palmer" class="about__image">
+      <div class="about__content">
+        <h1>About Me</h1>
+        <div class="flow-content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla libero natus, accusantium necessitatibus fugit similique quo pariatur nisi nesciunt soluta consectetur quisquam dolor voluptate magni, reprehenderit veniam, accusamus modi animi impedit architecto enim commodi tempore cum? Beatae mollitia nulla et nobis repudiandae deleniti, dolor laboriosam ex suscipit numquam nesciunt odio dolorum necessitatibus animi. Odio fuga, et deleniti eligendi ipsam perspiciatis?</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi facilis corporis deleniti illum voluptates reiciendis tempora ullam reprehenderit inventore commodi et quisquam dignissimos, culpa perferendis natus, quod fugiat distinctio amet.</p>
+        </div>
+        <div class="contact flex">
+          <a href="" data-contact="linkedin">Linkedin</a>
+          <a href="" data-contact="resume">Resume</a>
+          <p data-contact="email">rileyanne@berkeley.edu</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Portfolio -->
-  <section id="portfolio" class="portfolio" data-section="portfolio">
+  <section id="portfolio" class="portfolio" data-section="portfolio-tab">
   </section>
 
   <!-- Footer -->
