@@ -10,22 +10,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Riley Palmer Writing Portfolio</title>
   <script src="js/nav.js" defer></script>
+  <script src="js/observers.js" defer></script>
+  <script src="js/parallax.js" defer></script>
 </head>
 <body>
   <!-- Header -->
   <header class="flex wrapper">
     <a href="" class="logo">Riley Palmer</a>
     <nav>
-      <ul id="primary-navigation" data-visible="false" class = "primary-navigation flex">
-        <li class = "active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+        <li class="active home"><a href="#home">Home</a></li>
+        <li class="about"><a href="#about">About</a></li>
+        <li class="portfolio"><a href="#portfolio">Portfolio</a></li>
       </ul>
     </nav>
     <button class="menu-btn" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
   </header>
   <!-- Hero -->
-  <section class="hero">
+  <section id="home" class="hero" data-section="home">
     <img class="hero__image" src="images/hero-img.jpg" alt="">
     <div class="hero__container">
       <div class="text-content wrapper flow-content">
@@ -39,5 +41,16 @@
       </div>
     </div>
   </section>
+
+  <!-- About -->
+  <section id="about" class="about" data-section="about">
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio" data-section="portfolio">
+  </section>
+
+  <!-- Footer -->
+  <footer></footer>
 </body>
 </html>

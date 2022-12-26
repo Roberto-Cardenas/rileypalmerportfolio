@@ -2,7 +2,7 @@
 :root {
   /* Colors */
   --clr-dark-900: #000;
-  --clr-dark-400: #535353;
+  --clr-dark-400: #414141;
   
   --clr-light-100: #fff;
 
@@ -19,11 +19,22 @@
   --fw-bold: 700;
 }
 
+////////////////
 /* Reset */
+////////////////
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
 a {
@@ -39,7 +50,13 @@ body {
   line-height: 1.6;
 }
 
+/////////////////////////
 /* General Styling */
+/////////////////////////
+
+html {
+  scroll-behavior: smooth;
+}
 
 .flex {
   display: flex;
@@ -47,8 +64,8 @@ body {
 }
 
 
-.flow-content > * {
-  margin-block: var(--flow, 1rem);
+.flow-content > * + * {
+  margin-top: var(--flow, 1rem);
 }
 
 .sr-only {
@@ -103,6 +120,20 @@ body {
   }
 }
 
+@media (min-width: 60em) {
+  .btn {
+    font-size: 1.25rem;
+
+    &::after {
+      transform: translateY(calc(-50% + 0.125rem));
+    }
+
+    &:is(:hover, :focus)::after {
+      transform: translate(0.5em, calc(-50% + 0.125rem));
+    }
+  }
+}
+
 .btn--darkgreen {
   --bg: var(--clr-accent-500);
   --clr: var(--clr-light-100);
@@ -114,16 +145,23 @@ body {
   --clr: var(--clr-accent-900);
 }
 
+////////////////
 /* Header */
+////////////////
 
 header {
   position: fixed;
   z-index: 100;
   width: 100%;
-  padding-block: 1em;
+  padding-block: 0.5em;
 
   justify-content: space-between;
   align-items: center;
+  transition: background 300ms ease-in-out;
+}
+
+.nav-scrolled {
+  background: var(--clr-accent-300);
 }
 
 .logo {
@@ -131,7 +169,7 @@ header {
   
   color: var(--clr-dark-900);
   font-weight: var(--fw-semi-bold);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .menu-btn {
@@ -200,10 +238,9 @@ header {
     }
 
     li {
-      padding: 0.5em 2em;
-
       a {
         display: inline-block;
+        padding: 0.5em 2em;
         width: 100%;
         color: var(--clr-light-100);
 
@@ -242,24 +279,30 @@ header {
   }
 }
 
+/* ************* */
 /* Sections */
+/* ************* */
+
+section {
+  min-height: 100vh;
+}
+
+/* Hero Section */
 
 .hero {
-  min-height: 100vh;
-
   .hero__image {
     display: block;
     width: 100%;
-    height: calc(100vh - 10rem);
+    height: calc(100vh - 10.5rem);
 
     object-fit: cover;
-    object-position: top right;
+    object-position: right 0px;
   }
 
   .hero__container {
     .text-content {
       background: var(--clr-accent-500);
-      padding-block: 1rem;
+      padding-block: 2rem;
 
       .heading {
         font-size: 5rem;
@@ -268,20 +311,20 @@ header {
         font-weight: var(--fw-bold);
     
         width: min-content;
-        margin-top: -4rem;
+        margin-top: -4.5rem;
       }
     
       .subheading {
         font-size: 1.25rem;
         font-weight: var(--fw-semi-bold);
-
-        margin-bottom: 2rem;
       }
     
       p {
+        margin-top: 2rem;
+        max-width: 45ch;
+
         font-size: 0.875rem;
         font-weight: var(--fw-regular);
-        max-width: 45ch;
       }
     }
 
@@ -293,19 +336,24 @@ header {
   }
 }
 
-@media (min-width: 60em) {
-  .btn {
-    font-size: 1.25rem;
-
-    &::after {
-      transform: translateY(calc(-50% + 0.125rem));
+@media (min-width: 35em) {
+  .hero {
+    .hero__image {
+      height: calc(100vh - 18rem);
     }
 
-    &:is(:hover, :focus)::after {
-      transform: translate(0.5em, calc(-50% + 0.125rem));
+    .hero__container {
+      .text-content {
+        .heading {
+          font-size: 10.625rem;
+          margin-top: -8rem;
+        }
+      }
     }
   }
+}
 
+@media (min-width: 60em) {
   .hero {
     position: relative;
 
@@ -325,8 +373,7 @@ header {
 
       .text-content {
         .heading {
-          font-size: 10.625rem;
-          margin-top: var(--flow);
+          margin-top: 0;
           margin-right: -10rem;
         }
 
@@ -335,6 +382,7 @@ header {
         }
 
         p {
+          margin-top: var(--flow);
           font-size: 1.125rem;
         }
       }
