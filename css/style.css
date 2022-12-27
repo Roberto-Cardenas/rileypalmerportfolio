@@ -332,7 +332,7 @@ section {
   overflow: hidden;
 }
 .about::before, .about::after {
-  content: "about about about about about about about about about about about about about about about about about about about about about about";
+  content: "about about about about about about about about about about about about about about about about about about about about about about about about about about about about about";
   position: absolute;
   top: 2rem;
   left: 0;
