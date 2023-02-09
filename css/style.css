@@ -248,8 +248,8 @@ section {
   height: calc(100vh - 10.5rem);
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: right center;
-     object-position: right center;
+  -o-object-position: right 0px;
+     object-position: right 0px;
 }
 
 .hero__container .text-content {
