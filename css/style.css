@@ -7,8 +7,8 @@
   --clr-accent-100: #F1FEE8;
   --clr-accent-300: #D5EAC8;
   --clr-accent-400: #779265;
-  --clr-accent-500: hsl(96, 18%, 39%);
-  --clr-accent-900: hsl(96, 11%, 17%);
+  --clr-accent-500: #607552;
+  --clr-accent-900: #2a3027;
   /* Font Weight */
   --fw-regular: 400;
   --fw-medium: 500;
@@ -248,8 +248,8 @@ section {
   height: calc(100vh - 10.5rem);
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: right 0px;
-     object-position: right 0px;
+  -o-object-position: right center;
+     object-position: right center;
 }
 
 .hero__container .text-content {
@@ -261,7 +261,6 @@ section {
   line-height: 0.9;
   color: var(--clr-accent-900);
   font-weight: var(--fw-bold);
-  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   margin-top: -4.5rem;
@@ -304,10 +303,8 @@ section {
     top: 0;
     bottom: 0;
     margin: auto 0;
-    height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
-    width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
   }
@@ -365,7 +362,6 @@ section {
 .about__content {
   display: grid;
   grid-auto-flow: row;
-  grid-template-rows: -webkit-min-content -webkit-min-content auto;
   grid-template-rows: min-content min-content auto;
   gap: 1.5rem;
   padding: 1.5em;
@@ -441,7 +437,6 @@ section {
 .portfolio {
   display: grid;
   grid-auto-flow: row;
-  grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
   gap: 1rem;
   padding-bottom: 2rem;
